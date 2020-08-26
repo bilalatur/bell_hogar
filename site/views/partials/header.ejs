@@ -1,0 +1,66 @@
+<header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 logo">
+          <a href="/"><img src="/images/Logo.png" alt="logo"></a>
+        </div>
+        <div class="buscar col-12 col-md-6">
+          <form action="/products/search" method="POST" class="buscar-btn">
+            <input class ="buscar-input" type="search" placeholder="Buscar productos" name="search">
+          </form>
+        </div>
+        <div class="btn-toggle-navbar">
+          <nav class="navbar navbar-dark bg-ligth">
+            <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="p-1">
+              <ul class="">
+                <li><a href="/">Home</a></li>
+                <li><a href="http://localhost:3000/products">Productos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+              </ul>
+              <ul class="" id="navbarToggleExternalContent">
+                <% if(typeof usuario == 'undefined'){ %>
+                  <li><a href="/users/login">Iniciar sesión <i class="far fa-address-card"></i></a></li>
+                  <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+               <% } else if (usuario.is_admin == 0) { %>
+                  <li><a href="/users/profile"><%= usuario.first_name %><i class="far fa-address-card"></i></a></li>
+                  <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+               <% } else { %>
+                <li><a href="/products/adm/prod"><%= usuario.first_name %><i class="far fa-address-card"></i></a></li>
+                <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+               <% } %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class ="menu-md">
+          <ul class="menu-der col-md-12">
+            <% if(typeof usuario == 'undefined'){ %>
+              <li><a href="/users/login">Iniciar sesión <i class="far fa-address-card"></i></a></li>
+              <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+           <% } else if (usuario.is_admin == 0) { %>
+              <li><a href="/users/profile"><%= usuario.first_name %><i class="far fa-address-card"></i></a></li>
+              <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+           <% } else { %>
+            <li><a href="/products/adm/prod"><%= usuario.first_name %><i class="far fa-address-card"></i></a></li>
+            <li><a href="/carts/productCart">Carrito <i class="fas fa-shopping-basket"></i></a></li>
+           <% } %>
+          </ul>
+          <ul class="menu-ppal col-md-12 sibling-fade">
+            <li class="col-md-2 li-menu"><a href="/">Home</a></li>
+            <li class="col-md-2 li-menu"><a href="http://localhost:3000/products">Productos</a></li>
+            <li class="col-md-2 li-menu"><a href="#">Sobre Nosotros</a></li>
+            <li class="col-md-6 text-right">
+              <form action="/products/search" method="POST" class="buscar-btn">
+                <input class ="buscar-input" type="search" placeholder="Buscar productos" name="search">
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>

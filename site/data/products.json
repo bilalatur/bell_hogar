@@ -1,0 +1,112 @@
+[
+ {
+  "id": 1,
+  "name": "Varanus salvator",
+  "description": "neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget",
+  "image": "product_1.jpg",
+  "category": "Automotive",
+  "colors": "Red",
+  "price": 11544.32,
+  "stock": 394
+ },
+ {
+  "id": 2,
+  "name": "Heloderma horridum",
+  "description": "sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo",
+  "image": "product_2.jpg",
+  "category": "Garden",
+  "colors": "Fuscia",
+  "price": 149.01,
+  "stock": 430
+ },
+ {
+  "id": 3,
+  "name": "Salvadora hexalepis",
+  "description": "risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum",
+  "image": "product_3.jpg",
+  "category": "Automotive",
+  "colors": "Red",
+  "price": 72578.74,
+  "stock": 99
+ },
+ {
+  "id": 4,
+  "name": "Cervus unicolor",
+  "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam",
+  "image": "product_4.jpg",
+  "category": "Clothing",
+  "colors": "Yellow",
+  "price": 95589.06,
+  "stock": 817
+ },
+ {
+  "id": 5,
+  "name": "Cyrtodactylus louisiadensis",
+  "description": "magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend",
+  "image": "product_5.jpg",
+  "category": "Movies",
+  "colors": "Green",
+  "price": 53830.28,
+  "stock": 386
+ },
+ {
+  "id": 6,
+  "name": "Felis silvestris lybica",
+  "description": "proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula",
+  "image": "product_6.jpg",
+  "category": "Books",
+  "colors": "Indigo",
+  "price": 18514.04,
+  "stock": 629
+ },
+ {
+  "id": 7,
+  "name": "Gyps bengalensis",
+  "description": "donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
+  "image": "product_7.jpg",
+  "category": "Grocery",
+  "colors": "Purple",
+  "price": 346.75,
+  "stock": 738
+ },
+ {
+  "id": 8,
+  "name": "Sagittarius serpentarius",
+  "description": "hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent",
+  "image": "product_8.jpg",
+  "category": "Home",
+  "colors": "Green",
+  "price": 925.65,
+  "stock": 815
+ },
+ {
+  "id": 9,
+  "name": "Varanus salvator",
+  "description": "duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam",
+  "image": "product_9.jpg",
+  "category": "Toys",
+  "colors": "Yellow",
+  "price": 13978.17,
+  "stock": 552
+ },
+ {
+  "id": 10,
+  "name": "Ovis dalli stonei",
+  "description": "posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis",
+  "image": "product_10.jpg",
+  "category": "Games",
+  "colors": "Green",
+  "price": 67927.94,
+  "stock": 603
+ },
+ {
+  "id": 11,
+  "name": "Bison bison",
+  "description": "libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis",
+  "image": "product_11.jpg",
+  "category": "Baby",
+  "colors": "Pink",
+  "price": 89183.56,
+  "stock": 309
+ }
+]

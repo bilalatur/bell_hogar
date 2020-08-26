@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+  <body class="container">
+<body>
+    <div class="cointainer">
+        <div class="row">
+            <div class="edit-error-box col-12">
+                <img src="/images/Logo.png" class="logo-error" alt="">
+                <h1 class="title-error">La ruta a la que querés acceder requiere que estés logueado, volvé atrás para seguir navegando o hace el login para continuar</h1>
+                <br><input type="button" onclick="history.back()" class="error-button" id="IngresoLog" name="volver atrás" value="Volver atrás">   
+                <input type="button" Onclick="location.href='/users/login'" class="error-button" name="login" value="Login"> 
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('../partials/footer') %>   

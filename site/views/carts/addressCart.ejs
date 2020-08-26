@@ -1,0 +1,86 @@
+<!-- head -->
+<%- include('../partials/head') %>
+<body class="container">
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <div class ="container body-form">
+        <div class="form-header" >
+            <h1 class="form-title titulo-f">Domicilio de entrega</h1></br>
+
+            <% if(addresses != undefined){ %>
+                <div class="existeDomicilio">
+                    <form action="/carts/productCartPayment" method="GET">
+                        <label for = "domicilio"><h6>Seleccioná el domicilio de entrega :</h6></label>
+                        <select name="domicilio" id= "domicilio" type="text" class="form-control" required></br>
+                            <% for (let i=0; i<addresses.length; i++){ %>
+                                <option value="<%= addresses[i].dataValues.id %>">
+                                    <%= addresses[i].dataValues.address + " - " + addresses[i].dataValues.locality + " - " + addresses[i].dataValues.State.name + " - CP " + addresses[i].dataValues.zip_code %>
+                                </option>
+                            <% } %>
+                        </select>
+                        <button class="suscription-btn btn-color " type="submit">Confirmar</button>
+                    </form>
+                </div>
+                <br>
+                <h1 class="form-title titulo-f">O ingresá un nuevo domicio de entrega:</h1></br>
+            <% }; %>
+            <br>
+            <% if (typeof errors != 'undefined') { %>
+                <div class="alert alert-danger" role="alert">
+                    <p>¡Error al crear nuevo domicilio!</p>
+                    <ul>
+                        <% for( let i = 0; i < errors.length; i++ ) { %>
+                            <li>
+                                <%= errors[i].msg %>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+              <% } %>
+            <form action="/carts/addressCart" method="POST">
+                <label for = "domicilio"><h6>Domicilio :</h6></label>
+                <input type="text" class="form-control" id="domicilio" name="domicilio"></br>
+                <div class="row">
+                    <div class="col-12 col-md-2">
+                        <label for = "codigoPostal"><h6>Código Postal :</h6></label>
+                        <input  type="number" class="form-control" id="codigoPostal" name="codigoPostal"></br>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <label for = "localidad"><h6>Localidad :</h6></label>
+                        <input type="text" class="form-control" id="localidad" name="localidad"></br>
+                        </div>
+                    <div class="col-12 col-md-5">
+                        <label for = "provincia"><h6>Provincia :</h6></label>
+                        <select name="provincia" id= "provincia" type="text" class="form-control" required></br>
+                        <% for (let i=0; i<states.length; i++){ %>
+                            <option value="<%= states[i].id %>">
+                                <%= states[i].name %>
+                            </option>
+                        <% } %>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <button class="suscription-btn btn-color " type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+<!--  en update:
+
+ <label for = "domicilio"><h6>Domicilio :</h6></label>
+ <input type="text" class="form-control" id="domicilio" name="domicilio" value= "<%= usuario.address_id %>" ></br>
+ <div class="row">
+     <div class="col-12 col-md-2">
+         <label for = "codigoPostal"><h6>Código Postal :</h6></label>
+         <input  type="number" class="form-control" id="codigoPostal" name="codigoPostal"></br>
+     </div>
+     <div class="col-12 col-md-5">
+         <label for = "localidad"><h6>Localidad :</h6></label>
+         <input type="text" class="form-control" id="localidad" name="localidad"></br>
+     </div>
+     <div class="col-12 col-md-5">
+         <label for = "provincia"><h6>Provincia :</h6></label>
+         <input type="text" class="form-control" id="provincia" name="provincia"></br>
+     </div>
+ </div> -->

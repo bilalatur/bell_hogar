@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+<body class="container">
+<%- include('../partials/header') %>
+
+<!-- Search -->
+    <h1 class="products-title"><%= mensaje %> "<%= search %>"</h1>
+            <div class="container">
+                <div class="row">
+                    <div class ="view-products">
+                        <% product.forEach(product => { %>
+                        <article class="view-product col-12 col-md-4 col-lg-3">
+                            <div>
+                                <img src="/images/electrodomesticos/<%= product.name %> - imagen 1.jpg" alt="">
+                                <h5 class="product-name"><a href="/products/<%= product.id %>"><%= product.name %> </a></h5>
+                                <h5 class="product-price-view">$<%= formatPrice(product.price) %> </h5>
+                            </div>
+                        </article>
+                        <% }); %> 
+                    </div>
+                </div>
+            </div>
+  <%- include('../partials/footer') %>
+  </body>
+</html>

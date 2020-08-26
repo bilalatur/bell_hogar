@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head -->
+  <%- include('../partials/head') %>
+  
+<!-- header -->
+<%- include('../partials/header') %>
+  
+<body>
+    <% if (usuario.is_admin == 0) { %>
+    <div class="container">
+        <div class="row">
+            <div class="profile-div col-12">
+                <div class="left-profile col-12 col-md-4">
+                    <p class="p-profile-data">Datos personales</p>
+                    <p class="p-profile"><%= usuario.first_name %> <%= usuario.last_name %></p>
+                    <p class="p-profile"><%= usuario.email %></p>
+                    <p class="p-profile"><%= usuario.phone %></p>
+                    <p class="p-profile"><%= usuario.adress %></p>
+                    <input type="button" Onclick="location.href='/users/update'" class="profile-btn" name="editarPerfil" value="Editar Perfil">
+                    <br><br><form class="profile-btn-desktop" action="/users/logout" method="POST">
+                        <button class="profile-btn" id="logout" type="submit">Cerrar Sesión</button>
+                    </form>
+                </div>
+                <div class="left-profile col-12 col-md-8">
+                    <p class="p-profile-data-orders col-12">Mis órdenes</p>
+                    <div class="orders col-12">
+                        <span class="col-6 col-md-3">Orden</span>
+                        <span class="col-3 date-profile">Fecha de pedido</span>
+                        <span class="col-3 delivery-profile">Entrega</span>
+                        <span class="col-6 col-md-3">Estado</span>
+                    </div>
+                    <% if (cart.length != 0) { %>
+                     <% cart.forEach(cart => { %>
+                            <div class="order-date col-12">
+                                <span class="col-6 col-md-3"><%= cart.id %> </span> 
+                                <span class="col-3 date-profile"><%= cart.created_at %> </span>
+                                <span class="col-3 delivery-profile">A domicilio</span>
+                                <span class="col-6 col-md-3">Pendiente</span>
+                            </div>
+                        <% }) %>
+                        <% } else { %>
+                            <div class="order-date col-12">
+                                <h5 class="no-order col-12">Todavía no hay ningún pedido realizado</h5>
+                            </div>
+                    <% } %>
+                    <br><form class="profile-btn-mob" action="/users/logout" method="POST">
+                        <button class="profile-btn" id="logout" type="submit">Cerrar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <% } %>
+<!-- footer -->
+<%- include('../partials/footer') %>
+</body>
+</html>

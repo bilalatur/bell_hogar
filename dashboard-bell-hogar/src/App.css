@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+:root{
+  --gris-oscuro: #637a7f;
+  --naranja: #aa622d;
+  --beige: #e4eabe;
+  --marrón-oscuro: #8c827a ;
+  --gris-oscuro: #3f5952;
+  --azul-oscuro: #306670;
+  --marrón-claro: #c49e76;
+  --verde-musgo: #729486;
+  --verde-clarito: #b5c4b9;
+  --violeta-claro: #d2c8bf;
+  --amarillo: #ffd31d;
+  --gris-footer: #3f3f44;
+  --base-font-family:"Nunito Sans",sans-serif;
+}
+body {
+  
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  border: var(--gris-oscuro);
+}
+a{
+  color: var(--gris-oscuro);
+}
+a:hover{
+  color: var(--gris-oscuro);
+  text-decoration: none;
+}
+.contenedor{
+  justify-content: space-around;
+  padding:0px
+}
+.complementos{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+  padding:0px;
+  margin: 0px
+}
+.caja-total{
+  border: solid #3f3f44 3px;
+  border-radius: 5px;
+  margin: 10px;
+  padding-bottom: 4px;
+}
+
+.data-container{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 3px #3f3f44 solid;
+}
+/* .title-p{
+  margin-bottom: 1%;
+} */
+h4{
+  color: var(--gris-footer);
+}
+
+h4 .data-ranking { 
+  text-align: center;
+  color: var(--gris-footer);
+  margin-bottom: 3%;
+}
+
+.lista-ranking{
+  color: var(--gris-oscuro);
+}
+
+.ranking{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+}
+.div-ranking{
+  display: flex;
+  flex-wrap: wrap;
+  border: solid #3f3f44 3px;
+  border-radius: 5px;
+  justify-content: space-around;
+  margin: 5px;
+ 
+}
+.head{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.volver{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 3%;
+}
+.total div{
+  margin: 10px;
+  border: #3f3f44 3px;
+}
+.count{
+  text-align: center;
+  vertical-align: bottom;
+}
+.row{
+  margin-left: 0em;
+  margin-right: 0em;
+}
+td{
+  color: var(--gris-oscuro);
+}
+th{
+  color: var(--gris-footer);
+}
+li{
+  text-align: left;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+<body class="container">
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <h1 class="adm-title">Administración de productos</h1>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row adm-btn-add-div">
+                    <input type="button" Onclick= "location.href= '/products/create'" class="add-btn-adm" name="agregar" value="Agregar Productos">
+                    <input type="button" Onclick="location.href='http://localhost:3002'" class="add-btn-adm" name="dashboard" value="Dashboard"> 
+                </div>  
+            </div>
+            <br><br><p>Si el producto se indica con <i class="fas fa-times-circle"></i> está deshabilitado, si se indica con <i class="fas fa-check"></i></button> está habilitado</p>
+            <div class="cart-div-titles col-12">
+                <span class="col-3 col-md-6 cart-title2">Producto</span>
+                <span class="col-3 col-md-1 cart-title2">Precio</span>
+                <span class="col-3 col-md-1 cart-title2">Stock</span>
+                <span class="col-3 col-md-1 cart-title2">Editar</span>
+                <span class="col-3 col-md-1 cart-title2">Estado</span>
+            </div>
+            <% product.forEach(product => { %><br><br>
+            <div class="cart-div col-12">
+                <span class="col-3 col-md-6 cart-title2"><%= product.name %></span>
+                <span class="col-3 col-md-1 cart-title2">$<%= product.price %></span>
+                <span class="col-3 col-md-1 cart-title2"><%= product.stock %></span>
+                <span class="col-3 col-md-1 cart-title2"><input class="adm-btn-edit" type="button" Onclick="location.href='/products/<%= product.id %>/edit '" name="edit" value="Editar"></span>
+                <% if (product.enabled == 1) { %>
+                    <span class="col-3 col-md-1 cart-title2"><button class="adm-btn-dlt" type="button" Onclick="location.href='/products/<%= product.id %>/delete'" name="delete"><i class="fas fa-check"></i></button></span>
+                <% } else { %>
+                    <span class="col-3 col-md-1 cart-title2"><button class="adm-btn-dlt" type="button" Onclick="location.href='/products/<%= product.id %>/habilitar'" name="delete"><i class="fas fa-times-circle"></i></button></span>
+                <% } %>   
+            </div>
+            <% }); %> 
+        </div>
+    </div>
+    <form class="" action="/users/logout" method="POST">
+        <button class="adm-close" id="logout" type="submit">Cerrar Sesión</button>
+    </form>
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

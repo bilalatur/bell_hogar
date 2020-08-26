@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head -->
+  <%- include('../partials/head') %>
+  
+<!-- header -->
+<%- include('../partials/header') %>
+  
+<body>
+    <div class="cointainer profile-container col-12">
+        <div class="row col-6">
+            <div class="profile-card col-12">
+                <ul class="col-12">
+                    <% if (usuario.is_admin == false) { %>
+                        <li class="profile-text">Nombre de usuario: <%= usuario.first_name %></li>
+                        <li class="profile-text">Email: <%= usuario.email %></li>
+                        <li class="profile-text"><img class="col-md-2 col-lg-2" src="/images/avatars/<%=usuario.image %>"></li>
+                        <br><input type="button" Onclick="location.href='/users/update'" class="editarPerfil" name="editarPerfil" value="Editar Perfil">
+                        <br><br><li><form class="" action="/users/logout" method="POST">
+                            <button class="cart-buttons" id="logout" type="submit">Cerrar Sesión</button>
+                        </form></li>
+                        <% } else { %>
+                            <center>
+                            <input type="button" Onclick="location.href='/products/adm/prod'" class="error-button" name="eliminar" value="Administrador de Productos"> <br><br>
+                            <input type="button" Onclick="location.href='http://localhost:3002'" class="error-button" name="dashboard" value="Dashboard"> 
+                            <br><br><li><form class="" action="/users/logout" method="POST">
+                                <button class="cart-buttons" id="logout" type="submit">Cerrar Sesión</button>
+                            </form></li>
+                        </center>
+                            <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+<%- include('../partials/footer') %>
+</body>
+</html>

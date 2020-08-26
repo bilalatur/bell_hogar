@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+<body class="container">
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <%if (typeof(status) != "undefined"){
+        if(status == "success"){ %>
+            <div class="alert alert-success" role="alert">
+                <%=mensaje%>
+            </div>
+        <% }
+    }%>
+
+    <% if (typeof errors != 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                <% for( let i = 0; i < errors.length; i++ ) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    <% } %>
+    <!-- Inicio Formulario de Registro de usario-->
+    <div class ="container body-form">
+        <div class="form-header" > 
+            <h1 class="form-title titulo-f" > <i class="fa fa-user"></i> Formulario de Registro</h1></br>
+            
+            <form class="register-form" action="/users/create" method="POST" enctype="multipart/form-data" >  
+                <div>
+                    <ul class="ul-div-errores">
+                        
+                    </ul>
+                </div>
+                <label for = "id"><h6>Dni :</h6></label>
+                <input type="number" class="form-control" id="id" name ="id"></br> 
+                <label for = "nombre"><h6>Nombre :</h6></label>
+                <input id="nombre" type="text" class="form-control" id="nombre" name ="nombre"></br>
+                <label for = "apellido"><h6>Apellido:</h6></label>
+                <input id="apellido" type="text" class="form-control" id="apellido" name ="apellido"></br>
+                <label for = "telefono"><h6>Teléfono :</h6></label>
+                <input type="number" class="form-control" id="telefono" name="telefono"></br>
+                <br>
+                <br>
+                <label for = "image"><h6>Imagen de Perfil :</h6></label><br>
+                <input id='image' type="file" name="image" accept=".jpg, .jpeg, .png"><br>
+                <br>
+                <label for = "email"><h6>Email :</h6></label> <br>
+                <input id="email" type="email" class="form-control" id="email" name="email">
+                <br>
+                <label for = "password"><h6>Password :</h6></label><br>
+                <input id="password" type="password" name="password" id="password" class="form-control" placeholder="******"><br>
+                <div>
+                    <p class="pass-mayus"><i id="timesMay" class="fas fa-times"></i><i id="checkMay" class="fas fa-check"></i> La contraseña debe contener al menos una mayúscula</p>
+                    <p class="pass-minus"><i id="timesMin" class="fas fa-times"></i><i id="checkMin" class="fas fa-check"></i> La contraseña debe contener al menos una minúsucula</p>
+                    <p class="pass-num"><i id="timesNum" class="fas fa-times"></i><i id="checkNum" class="fas fa-check"></i> La contraseña debe contener al menos un número</p>
+                </div>
+                <label id="password2" for = "password2"><h6>Confirmar password :</h6></label><br>
+                <input id="password2" type="password" name="password2" class="form-control" placeholder="******"><br>
+                <button class="suscription-btn btn-color "  id="registrarme" type="submit">Registrame</button>
+                <button class="suscription-btn btn-color "   id="borrar" type="reset">Borrar</button>
+            </form>
+        </div>
+    </div>    
+    <script src="/javascript/usersRegisterJS.js"></script>
+    <!-- Fin Formulario de Registro de Usuario -->
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

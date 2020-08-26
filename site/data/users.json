@@ -1,0 +1,50 @@
+[
+ {
+  "id": "1",
+  "nombre": "Admin",
+  "apellido": "Admin",
+  "telefono": "-",
+  "email": "admin@bell.hogar",
+  "password": "$2b$10$K731/tDXVyq4cG1enM.ZleTecsN.pOVvd3ZNvLYfkK0P5Zhaywrpa",
+  "category": "admin",
+  "image": "-",
+  "domicilio": "-",
+  "admin": "admin"
+ },
+ {
+  "id": "32572009",
+  "nombre": "Emiliana",
+  "apellido": "Vargas",
+  "telefono": "156514456",
+  "email": "abc@abc.com",
+  "password": "$2b$10$FxCMEQGTdAVvuJSIcNYro.URmjzmSpAhFFW0VHCgUlcoRvsoVzBM.",
+  "category": "user",
+  "image": "Emiliana - 325720092020-.JPG",
+  "domicilio": "mendoza",
+  "admin": "undefined"
+ },
+ {
+  "id": "33333333",
+  "nombre": "prueba 3",
+  "apellido": "prueba 3",
+  "telefono": "156333333",
+  "email": "prueba3@abc.com",
+  "password": "$2b$10$K731/tDXVyq4cG1enM.ZleTecsN.pOVvd3ZNvLYfkK0P5Zhaywrpa",
+  "category": "user",
+  "image": "prueba 3 - 333333332020-.jpg",
+  "domicilio": "mendoza",
+  "admin": "undefined"
+ },
+ {
+  "id": "44444444",
+  "nombre": "prueba4",
+  "apellido": "prueba4",
+  "telefono": "44444444",
+  "email": "prueba4@abc.com",
+  "password": "$2b$10$5Fguf1R2XZTCJL7Qk7/AeuouEw7o3jbTk6BHOoo71sXwdXvHjCf7e",
+  "category": "user",
+  "image": "prueba4 - 444444442020-.jpeg",
+  "domicilio": "prueba4",
+  "admin": "undefined"
+ }
+]

@@ -1,0 +1,67 @@
+  <!-- head -->
+  <%- include('../partials/head') %>
+  <body class="container">
+ <!-- header -->
+ <%- include('../partials/header') %>
+
+ <div class="container">
+  <div class="row col-12">
+    <div class="edit-form-box col-12">
+      <h1>Editar Producto <%=product.name%></h1><br>
+      <h4>Completa los siguientes datos del producto</h4><br>
+        <form class="editProduct col-12" action="/products/<%=product.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+
+          <label class="col-12 col-md-10" for = "nombre"><h6>Nombre del Producto:</h6>
+            <input name="nombre" id="nombre" type="text" class="form-control" value="<%= product.name %> ">
+            <p class="pNombre validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "descripcion"><h6>Descripción:</h6>
+            <input name="descripcion" id= "descripcion" type="text" class="form-control" value="<%= product.description %> ">
+            <p class="pDescripcion validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "categoria"><h6>Categoría:</h6>
+            <input name="categoria" id= "categoria" type="text" class="form-control" value="<%= product.category %> ">
+            <p class="pCategoria validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "subcategoria"><h6>Subcategoría:</h6>
+            <input name="subcategoria" id= "subcategoria" type="text" class="form-control" value="<%= product.subcategory %> ">
+            <p class="pSubcategoria validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "marca"><h6>Marca:</h6>
+            <input name="marca" id= "marca" type="text" class="form-control" value="<%= product.brand %> ">
+            <p class="pMarca validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "precio"><h6>Precio:</h6>
+            <input name="precio" id="precio" type="text" class="form-control" value="<%= formatPrice(product.price) %> "></br>
+            <p class="pPrecio validator"></p>
+          </label></br>
+
+          <label class="col-12 col-md-10" for = "images"><h6>Imágenes del Producto:</h6>
+            <input class="col-12 col-md-10" name="images" id="images" type="file" accept=".jpg, .jpeg, .png" multiple><br>
+            <p class="pImages validator"></p>
+          </label><br>
+
+          <label class="col-12 col-md-10" for = "stock"><h6>Stock:</h6>
+            <input name="stock" id="stock" type="text" class="form-control" value="<%= product.stock %> ">
+            <p class="pStock validator"></p>
+          </label></br>
+
+          <div class="btnProduct">
+            <button class="suscription-btn btn-color col-12 col-md-3 "  id="editarProducto" type="submit">Confirmar edicion</button><br>
+            <button class="suscription-btn btn-color col-12 col-md-3 "  id="borrarProducto" type="reset">Resetear edición</button>
+          </div>
+        </form>
+      </div>
+     </div>
+ </div>
+ <script src="/javascript/productsEdit.js"></script>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+  </body>
+</html>

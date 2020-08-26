@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+<body class="container">
+     <!-- header -->
+     <%- include('../partials/header') %>
+
+     <%if (typeof(status) != "undefined"){
+        if(status == "success"){ %>
+            <div class="alert alert-success" role="alert">
+                <%=mensaje%>
+            </div>
+         <% }
+    }%>
+
+    <!-- verifico erorres -->
+      <% if (typeof errors != 'undefined') { %> 
+        <p style="color:red">El usuario o contraseña ingresados no son válidos</p>
+         <ul>
+             <% for( let i = 0; i < errors.length; i++ ) { %>
+             <li>
+                 <%= errors[i].msg %> 
+             </li>
+             <% } %>
+         </ul>
+       <% } %>
+   
+    <!--Inicio del Code Formulario-->
+    <div class="form-login col-11 col-md-5">
+        <div class ="Icon">
+            <h1 class="form-title center" > <i class="fa fa-archive"></i> Inicio de Sesión</h1>
+        </div>
+        <div class="ContentForm">
+            <form class="login-form" action="/users/login" method="POST" name="FormEntrar">
+                <div>
+                    <ul class="ul-div-errores">
+                        
+                    </ul>
+                </div>
+                <label for = "Email"><h6>Email:</h6></label> 
+                <input id="email" type="email" class="form-control" name="email">
+                <label for = "Password"><h6>Password:</h6></label>
+                <input id="password" type="password" name="password" class="form-control" placeholder="******"><br>
+                <label for="">Recordame</label>
+                <input type="checkbox" value="recordame" name="recordame" checked> 
+                <button class="suscription-btn btn-color " style="width: 100%"  id="IngresoLog" type="submit">Entrar</button>
+                <input type="button" class="suscription-btn btn-color" style="width: 100%" value="Registrarse" OnClick="location.href='/users/register' ">
+           </div>
+        </div>
+        <!-- Fin Code Formulario-->
+        <!-- footer -->
+        <script src="/javascript/usersLoginJS.js"></script>
+        <%- include('../partials/footer') %>
+    </body>
+    </html>

@@ -1,0 +1,91 @@
+<%- include('../partials/head') %>
+<body class="container">
+  <!-- header -->
+  <%- include('../partials/header') %>
+    <h1 class="cart-payment-title">Finalizar compra</h1>
+    <div class="container">
+        <div class="row">
+            <div class="cart-payment-div">
+                <div class="cart-payment-left col-10 col-md-7">
+                    <form action="">
+                        <label class="cart-payment-data col-12" for="">Nombre completo</label>
+                            <input class="cart-payment-input col-12" type="text" value="<%= usuario.first_name %> <%= usuario.last_name %>">
+                        <label class="cart-payment-data col-12" for="">DNI o CUIT</label>
+                            <input class="cart-payment-input col-12" type="text" value="<%= usuario.dni_cuit %>">
+                        <label class="cart-payment-data col-12" for="">Teléfono</label>
+                            <input class="cart-payment-input col-12" type="text" value="<%= usuario.phone %>">
+                        <label class="cart-payment-data col-12" for="">Email</label>
+                            <input class="cart-payment-input col-12" type="text" value="<%= usuario.email %>">
+                    </form>
+                    <form class="cart-payment-data form-cart col-12" action="">
+                        <span class="radio-cart"><label for = “”>Seleccione método de entrega</label></span>
+                        <br><input type ="radio" name = "entrega" value="entrega"> Entrega a domicilio 
+                        <br><br><input type ="radio" name = "entrega" value="retiro"> Retiro en tienda
+                    </form>
+                    <form class="cart-payment-data form-cart col-12" action="">
+                        <span class="radio-cart"><br><label for = “”>Seleccione método de pago</label></span>
+                        <br><input type ="radio" name = "pago" value="efectivo"> Efectivo/Transferencia
+                        <br><br><input type ="radio" name = "pago" value="credito"> Tarjeta de crédito
+                        <br><br><input type ="radio" name = "pago" value="debito"> Tarjeta de débito
+                    </form>
+                </div>
+                <div class="cart-payment-right col-5">
+                    <div class="products-payment col-12">
+                    <p class="cart-payment-title2">Resumen de tu compra</p>
+                        <div class="products-cart-payment">
+                            <div class="col-6">
+                                <img class="cart-payment-img" src="/images/sofa3.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <span class="p-right-cart col-2">Sillón Verde Living</span>
+                                <span class="p-right-cart col-2">$15.000</span>
+                                <span class="p-right-cart col-2">Cantidad: 1</span>
+                           </div>
+                        </div>
+                        <div class="products-cart-payment">
+                            <div class="col-6">
+                                <img class="cart-payment-img" src="/images/sofa3.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <span class="p-right-cart col-2">Sillón Verde Living</span>
+                                <span class="p-right-cart col-2">$15.000</span>
+                                <span class="p-right-cart col-2">Cantidad: 2</span>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="cart-totals col-10 col-md-12">
+                        <div class="total-title col-4 col-md-6">
+                            <span class="col-12 total-cart-payment">Subtotal: </span>
+                            <span class="col-12 total-cart-payment">Descuento: </span>
+                            <span class="col-12 total-cart-payment">Total: </span>
+                        </div>
+                        <div class="total-prices col-4 col-md-6">
+                            <span class="col-12 total-cart-payment">$45.000</span>
+                            <span class="col-12 total-cart-payment">$0</span> 
+                            <span class="col-12 total-cart-payment">$45.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-payment-btn col-12">
+                    <button class="col-12 col-md-2 end-cart-btn" Onclick="location.href='productCartPayment'">Finalizar compra</button>
+                    <button class="col-12 col-md-2 cart-btn" onclick="history.back()">Volver atrás</button>
+                </div>
+                <div class="cart-total-mob col-12">
+                    <span class="col-12 total-cart-payment-mob">Resumen de tu compra</span>
+                    <div class="total-title-mob col-6">
+                        <span class="col-12 total-cart-payment">Subtotal: </span>
+                        <span class="col-12 total-cart-payment">Descuento: </span>
+                        <span class="col-12 total-cart-payment">Total: </span>
+                    </div>
+                    <div class="total-prices-mob col-6">
+                        <span class="col-12 total-cart-payment">$45.000</span>
+                        <span class="col-12 total-cart-payment">$0</span>
+                        <span class="col-12 total-cart-payment">$45.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- footer -->
+  <%- include('../partials/footer') %>

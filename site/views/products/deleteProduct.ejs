@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+<body class="container">
+    <!-- header -->
+    <%- include('../partials/header') %>
+    
+    <!-- header -->
+    <div class="container">
+        <div class="row">
+            <div class="edit-form-box col-8 col-md-12"> 
+                <h1>Deshabilitar Producto</h1>
+                <h4>¿Confirma que desea deshabilitar el siguiente producto?</h4>
+                <form class="delete" action="/products/<%=product.id%>/delete?_method=PUT" method="POST">
+                    <label for = "id"><h6>Código del Producto:</h6></label>
+                    <input name="id" id="id" type="text" class="form-control" value= "<%=product.id%>" readonly="readonly"></br>
+                    <label for = "name"><h6>Nombre del Producto:</h6></label>
+                    <input name="name" id="name" type="text" class="form-control" value="<%=product.name%>" readonly="readonly"></br> 
+                    <button class="suscription-btn btn-color "  id="delete" type="submit">Deshabilitar producto</button><br><br>
+                    <input type="button" onclick="history.back()" class="error-button" id="IngresoLog" name="volver atrás" value="Volver atrás">    
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>
