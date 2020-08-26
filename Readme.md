@@ -2,7 +2,7 @@
 
 Link al tablero Scrum: https://trello.com/b/MRqsxB5k
 
-Nuestro equipo de desarrollo está formado por Bilal Atur, Federico Correas, Sorany Jiménez y Emiliana Vargas.
+Nuestro equipo de desarrollo está formado por Bilal Atur y Emiliana Vargas.
 Dado que nuestro sitio web será desarrollado para un cliente que tiene su negocio en Los Corralitos, Guaymallén, y que en la zona ha aumentado ampliamente la urbanización en éstos últimos años, pero sin aumentar la oferta de productos de forma proporcional, dirigiremos nuestro ecommerce a este nuevo público que se ha desarrollado en la zona. Es un público familiar, joven y de nivel económico medio-alto.
 Para ajustar nuestra oferta a ese público, el ecommerce que vamos a desarrollar ofrecerá muebles de diseño para distintos ambientes de la casa, principalmente para living y comedor. Estos productos se encuentran disponibles en el negocio de nuestro cliente, pero al carecer de página web no siempre llegan a la audiencia objetivo. Para éstos muebles existirá la posibilidad de comprar el producto en su versión estándar o también existirá la opción de personalizarlos, pudiendo modificar su tamaño y/o colores.
 
